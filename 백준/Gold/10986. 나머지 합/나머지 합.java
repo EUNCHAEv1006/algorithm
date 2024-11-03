@@ -31,6 +31,10 @@ public class Main {
         for(int i=0; i<M; i++) {
             if(C[i]>1) {
                 long count = C[i];
+
+                // 나머지가 같은 두 누적합을 선택하면, 그 사이의 구간 합이 M으로 나눠떨어짐
+                // 두 개를 선택할 때마다 각기 다른 구간을 만들 수 있음
+                // mC2
                 answer += count * (count-1) / 2;
             }
         }
